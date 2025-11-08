@@ -210,45 +210,50 @@ body {
 @media (max-width: 768px) {
   body {
     padding: 15px;
+    margin: 0;
   }
 
+  /* Center the welcome text */
   .app-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* makes it fill full screen height */
-  text-align: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* full screen height */
+    margin: 0;
+  }
 
   .main-heading1 {
-    font-size: 3em;
-    margin-top: 20px;
+    font-size: 2.5em;
+    margin: 0;
   }
 
   .main-heading2 {
-    font-size: 3em;
-    margin-top: -25px;
-    margin-bottom: 50px;
+    font-size: 2.2em;
+    margin: 10px 0 40px 0;
   }
 
+  /* Todo Section */
   .todo-body {
     width: 90%;
-    padding: 40px;
+    padding: 25px;
+    margin: 0 auto;
   }
 
   .todo-body h1 {
-    font-size: 30px;
-    margin-top: -20px;
-    margin-bottom: 30px;
+    font-size: 26px;
+    margin: 10px 0 25px 0;
   }
 
   .input {
-    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
   .input input[type="text"] {
+    flex: 1;
     font-size: 16px;
     padding: 8px 12px;
   }
@@ -261,18 +266,47 @@ body {
   .todo-items li {
     font-size: 16px;
     padding: 10px 12px;
+    line-height: 1.4;
   }
 
   .edit-button,
   .delete-button,
   .save-button,
   .cancel-button {
-    font-size: 16px;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 6px 10px;
   }
 
   .edit-input input {
     font-size: 14px;
     padding: 6px;
+  }
+}
+
+/* Extra small screens (phones under 480px) */
+@media (max-width: 480px) {
+  .app-container {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .main-heading1 {
+    font-size: 2em;
+  }
+
+  .main-heading2 {
+    font-size: 1.8em;
+  }
+
+  .input {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .todo-body {
+    padding: 20px;
   }
 }
