@@ -48,29 +48,27 @@ body {
 }
 
 .input {
-  height: 50px;
   display: flex;
-  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .input input[type="text"] {
-  font-family: Arial, Helvetica, sans-serif;
-  flex-grow: 1;
-  padding: 10px 15px;
+  flex: 1;
+  font-size: 18px;
+  padding: 10px 12px;
   border: 1px solid grey;
-  border-radius: 3px;
-  font-size: 20px;
-  transition: border-color 0.2s ease-in-out;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-/* .input input[type = "text"]:focus {
-    border-color: red;
-} */
-
 .add-button {
+  flex-shrink: 0;
+  font-size: 18px;
   padding: 10px 20px;
-  font-size: 20px;
   background-color: #6C63FF;
   border: 1px solid grey;
   border-radius: 4px;
@@ -220,7 +218,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* full screen height */
+    height: 100vh;
     margin: 0;
   }
 
@@ -246,21 +244,34 @@ body {
     margin: 10px 0 25px 0;
   }
 
+  /* Input and Button Layout */
   .input {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
+    width: 100%;
   }
 
   .input input[type="text"] {
     flex: 1;
     font-size: 16px;
-    padding: 8px 12px;
+    padding: 10px 12px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
 
   .add-button {
+    flex-shrink: 0;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 10px 16px;
+    background-color: #6C63FF;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
   }
 
   .todo-items li {
@@ -298,15 +309,27 @@ body {
     font-size: 1.8em;
   }
 
+  .todo-body {
+    width: 95%;
+    padding: 20px;
+  }
+
   .input {
     flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .input input[type="text"] {
+    width: 100%;
   }
 
   .add-button {
     width: 100%;
+    text-align: center;
   }
 
-  .todo-body {
-    padding: 20px;
+  .todo-items li {
+    font-size: 15px;
   }
 }
