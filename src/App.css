@@ -213,8 +213,13 @@ body {
   }
 
   .app-container {
-    margin-top: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* makes it fill full screen height */
+  text-align: center;
+}
 
   .main-heading1 {
     font-size: 3em;
